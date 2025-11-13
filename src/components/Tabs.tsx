@@ -21,7 +21,7 @@ export function Tabs({ tabs }: { tabs: Tab[] }) {
               href={t.href}
               className={`${
                 active
-                  ? "border-blue-600 text-blue-600"
+                  ? "border-blue-400 text-blue-400"
                   : "border-transparent text-gray-600 hover:text-gray-800 hover:border-gray-300"
               } whitespace-nowrap border-b-2 px-4 py-2 text-sm font-medium`}
             >
