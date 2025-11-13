@@ -34,23 +34,13 @@ export function MovieForm({mode, defaultValues}: MovieFormProps) {
   } = useForm<MovieFormValues>({
     resolver: zodResolver(baseSchema),
     defaultValues: {
-      titulo: "",
-      faixaEtaria: "",
-      genero: "",
-      atores: [{ nome: "" }],
+      id: defaultValues?.id,
+      titulo: defaultValues?.titulo ?? "",
+      faixaEtaria: defaultValues?.faixaEtaria ?? "",
+      genero: defaultValues?.genero ?? "",
+      atores: defaultValues?.atores && defaultValues.atores.length > 0 ? defaultValues.atores : [{ nome: "" }],
     },
   });
-
-  useEffect(() => {
-    if (defaultValues) {
-      reset({
-        titulo: defaultValues.titulo ?? "",
-        faixaEtaria: defaultValues.faixaEtaria ?? "",
-        genero: defaultValues.genero ?? "",
-        atores: defaultValues.atores && defaultValues.atores.length > 0 ? defaultValues.atores : [{ nome: "" }],
-      });
-    }
-  }, [defaultValues, reset]);
 
   const { fields, append, remove } = useFieldArray({ control, name: "atores" });
 
@@ -70,7 +60,7 @@ export function MovieForm({mode, defaultValues}: MovieFormProps) {
 
     if(mode === "edit") {
       console.log(values)
-      axios.put(`${baseUrl}/filmes/${defaultValues?.id}`,values).then((response)=>{
+      axios.put(`${baseUrl}/filmes/${values.id}`,values).then((response)=>{
         alert("Filme editado com sucesso!");
         window.location.reload();
       }).catch(function (error) {
@@ -82,13 +72,15 @@ export function MovieForm({mode, defaultValues}: MovieFormProps) {
 
   return (
     <form onSubmit={onSubmit} className="space-y-4">
+      {mode === "edit" && <input type="hidden" {...register("id")} />}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
           <label className="label">Título</label>
           <input
-              className="input" {...register("titulo")}
+              className="input" 
+              {...register("titulo")}
               placeholder="Digite o título"
-              value={defaultValues?.titulo}
+              //value={defaultValues?.titulo}
           />
           {errors.titulo && <p className="text-sm text-red-600 mt-1">{errors.titulo.message}</p>}
         </div>
@@ -99,7 +91,7 @@ export function MovieForm({mode, defaultValues}: MovieFormProps) {
             inputMode="numeric"
             {...register("faixaEtaria")}
             placeholder="Ex: 12, 14, 16"
-            value={defaultValues?.faixaEtaria}
+            //value={defaultValues?.faixaEtaria}
           />
           {errors.faixaEtaria && <p className="text-sm text-red-600 mt-1">{errors.faixaEtaria.message}</p>}
         </div>
@@ -110,7 +102,7 @@ export function MovieForm({mode, defaultValues}: MovieFormProps) {
             inputMode="text"
             {...register("genero")}
             placeholder="Ex: Ficção, Ação"
-            value={defaultValues?.genero}
+            //value={defaultValues?.genero}
           />
           {errors.genero && <p className="text-sm text-red-600 mt-1">{errors.genero.message}</p>}
         </div>

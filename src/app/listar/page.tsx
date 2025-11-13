@@ -49,9 +49,8 @@ export default function ListarPage() {
                     <td>
                       <button
                         className="button-secondary"
-                        onClick={async ()=>{
-                          const data= await axios.put(`${baseUrl}/filmes/${filme.id}`, filme);
-                          setFilmeEditar(data.data);
+                        onClick={()=>{
+                          setFilmeEditar(filme);
                         }}
                       >
                         Editar
@@ -82,6 +81,7 @@ export default function ListarPage() {
         </div>
         {/* Formulário em modo edição apenas para capturar/validar dados, sem integração */}
         <MovieForm
+          key={filmeEditar?.id ?? "novo"}
           mode="edit"
           defaultValues={{ id: filmeEditar?.id, titulo: filmeEditar?.titulo, faixaEtaria: filmeEditar?.faixaEtaria, genero: filmeEditar?.genero, atores: filmeEditar?.atores }}
         />
