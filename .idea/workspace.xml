@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88aca734-3d53-41c5-b48f-344bbd57ec40" name="Changes" comment="fix-button">
+    <list default="true" id="88aca734-3d53-41c5-b48f-344bbd57ec40" name="Changes" comment="black names">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/listar/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/listar/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +99,7 @@
       <option name="presentableId" value="Default" />
       <updated>1763045643261</updated>
       <workItem from="1763045645694" duration="7342000" />
-      <workItem from="1763053565090" duration="3248000" />
+      <workItem from="1763053565090" duration="4321000" />
     </task>
     <task id="LOCAL-00001" summary="design azul">
       <option name="closed" value="true" />
@@ -116,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763056813078</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="black names">
+      <option name="closed" value="true" />
+      <created>1763057404921</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1763057404921</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,6 +134,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="design azul" />
     <MESSAGE value="fix-button" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix-button" />
+    <MESSAGE value="black names" />
+    <option name="LAST_COMMIT_MESSAGE" value="black names" />
   </component>
 </project>
