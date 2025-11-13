@@ -20,10 +20,10 @@ export type MovieFormValues = z.infer<typeof baseSchema>;
 
 export interface MovieFormProps {
   mode: "create" | "edit";
-  /*defaultValues?: Partial<MovieFormValues>;*/ // partial, função do typescript que transforma todas as chaves do objeto em opcional
+  defaultValues?: Partial<MovieFormValues>; // partial, função do typescript que transforma todas as chaves do objeto em opcional
 }
 
-export function MovieForm({mode, /*defaultValues*/}: MovieFormProps) {
+export function MovieForm({mode, defaultValues}: MovieFormProps) {
   const {
     control,
     handleSubmit,
@@ -40,7 +40,7 @@ export function MovieForm({mode, /*defaultValues*/}: MovieFormProps) {
     },
   });
 
-/*  useEffect(() => {
+  useEffect(() => {
     if (defaultValues) {
       reset({
         titulo: defaultValues.titulo ?? "",
@@ -49,7 +49,7 @@ export function MovieForm({mode, /*defaultValues*/}: MovieFormProps) {
         atores: defaultValues.atores && defaultValues.atores.length > 0 ? defaultValues.atores : [{ nome: "" }],
       });
     }
-  }, [defaultValues, reset]);*/
+  }, [defaultValues, reset]);
 
   const { fields, append, remove } = useFieldArray({ control, name: "atores" });
 
@@ -83,6 +83,7 @@ export function MovieForm({mode, /*defaultValues*/}: MovieFormProps) {
             inputMode="numeric"
             {...register("faixaEtaria")}
             placeholder="Ex: 12, 14, 16"
+            value={defaultValues?.faixaEtaria}
           />
           {errors.faixaEtaria && <p className="text-sm text-red-600 mt-1">{errors.faixaEtaria.message}</p>}
         </div>
@@ -93,6 +94,7 @@ export function MovieForm({mode, /*defaultValues*/}: MovieFormProps) {
             inputMode="text"
             {...register("genero")}
             placeholder="Ex: Ficção, Ação"
+            value={defaultValues?.genero}
           />
           {errors.genero && <p className="text-sm text-red-600 mt-1">{errors.genero.message}</p>}
         </div>

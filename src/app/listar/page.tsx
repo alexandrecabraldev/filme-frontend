@@ -8,7 +8,7 @@ import {Filme} from "@/types/movie";
 export default function ListarPage() {
 
   const [filmes, setFilmes] = useState<Filme[]>([]);
-
+  const [filmeEditar, setFilmeEditar] = useState<Filme>();
   async function buscarFilmes(){
     try{
       const response = await axios.get(`${baseUrl}/filmes`);
@@ -47,7 +47,15 @@ export default function ListarPage() {
                     <td>{filme.faixaEtaria}</td>
                     <td>{filme.genero}</td>
                     <td>
-                      <button className="button-secondary">Editar</button>
+                      <button
+                        className="button-secondary"
+                        onClick={async ()=>{
+                          const data= await axios.put(`${baseUrl}/filmes/${filme.id}`, filme);
+                          setFilmeEditar(data.data);
+                        }}
+                      >
+                        Editar
+                      </button>
                       <button
                           className="button-danger"
                           onClick={async ()=>{
@@ -75,7 +83,7 @@ export default function ListarPage() {
         {/* Formulário em modo edição apenas para capturar/validar dados, sem integração */}
         <MovieForm
           mode="edit"
-          /*defaultValues={{ titulo: "", faixaEtaria: "", genero: "", atores: [{ nome: "" }] }}*/
+          defaultValues={{ titulo: filmeEditar?.titulo, faixaEtaria: filmeEditar?.faixaEtaria, genero: filmeEditar?.genero, atores: [{ nome: "" }] }}
         />
       </section>
     </div>
