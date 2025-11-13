@@ -10,6 +10,7 @@ export const baseUrl= "http://localhost:3000/api";
 // Schema do formulário apenas para validação básica (sem lógica de backend)
 const atorSchema = z.object({ nome: z.string().min(1, "Informe o nome do ator") });
 const baseSchema = z.object({
+  id: z.string().uuid(),
   titulo: z.string().trim().min(1, "Informe o título"),
   faixaEtaria: z.string().regex(/^(?:[0-9]|[1-9][0-9])$/, "A faixa etária deve estar entre 0 e 99").min(1, "Informe a faixa etária"),
   genero: z.string().trim().min(1, "Informe o gênero"),
@@ -55,15 +56,27 @@ export function MovieForm({mode, defaultValues}: MovieFormProps) {
 
   const onSubmit = handleSubmit((values) => {
     // Sem lógica de API: apenas exibir no console os dados capturados
-    console.log("Form values:", values);
+    //console.log("Form values:", values);
     if (mode === "create") {
       //reset();
       axios.post(`${baseUrl}/filmes`, values).then((response)=>{
         console.log(response);
         alert("Filme inserido com sucesso!");
+        return;
       }).catch(function (error) {
          console.log(error);
+         return
       });
+    }
+    if(mode === "edit") {
+      console.log("passou aqui")
+      axios.put(`${baseUrl}/filmes/${values?.id}`,values).then((response)=>{
+        alert("Filme editado com sucesso!");
+        return;
+      }).catch(function (error) {
+        console.log(error);
+         return
+      })
     }
     //window.location.reload();
   });
@@ -76,7 +89,7 @@ export function MovieForm({mode, defaultValues}: MovieFormProps) {
           <input
               className="input" {...register("titulo")}
               placeholder="Digite o título"
-            value={defaultValues?.titulo}
+              value={defaultValues?.titulo}
           />
           {errors.titulo && <p className="text-sm text-red-600 mt-1">{errors.titulo.message}</p>}
         </div>
