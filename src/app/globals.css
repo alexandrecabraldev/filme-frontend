@@ -94,7 +94,7 @@ body {
     @apply text-gray-800;
   }
   .input {
-    @apply border-gray-700 bg-blue-200 text-gray-100 placeholder:text-gray-500 focus:border-blue-500;
+    @apply border-gray-700 bg-blue-200 text-gray-900 placeholder:text-gray-500 focus:border-blue-900;
   }
   .button-secondary {
     @apply bg-gray-800 text-gray-100 hover:bg-gray-700 focus:ring-gray-600/50;
