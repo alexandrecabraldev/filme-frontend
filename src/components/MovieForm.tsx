@@ -145,9 +145,6 @@ export function MovieForm({mode, defaultValues}: MovieFormProps) {
         <button type="submit" className="button">
           {mode === "create" ? "Inserir" : "Salvar alterações"}
         </button>
-        <button type="reset" className="button-secondary" onClick={() => reset()}>
-          Limpar
-        </button>
       </div>
     </form>
   );

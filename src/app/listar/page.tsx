@@ -83,7 +83,7 @@ export default function ListarPage() {
         {/* Formulário em modo edição apenas para capturar/validar dados, sem integração */}
         <MovieForm
           mode="edit"
-          defaultValues={{ titulo: filmeEditar?.titulo, faixaEtaria: filmeEditar?.faixaEtaria, genero: filmeEditar?.genero, atores: [{ nome: "" }] }}
+          defaultValues={{ titulo: filmeEditar?.titulo, faixaEtaria: filmeEditar?.faixaEtaria, genero: filmeEditar?.genero, atores: filmeEditar?.atores }}
         />
       </section>
     </div>
