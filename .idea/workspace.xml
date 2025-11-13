@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88aca734-3d53-41c5-b48f-344bbd57ec40" name="Changes" comment="black names">
-      <change beforePath="$PROJECT_DIR$/src/app/listar/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/listar/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MovieForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieForm.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
