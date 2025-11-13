@@ -80,7 +80,6 @@ export function MovieForm({mode, defaultValues}: MovieFormProps) {
               className="input" 
               {...register("titulo")}
               placeholder="Digite o título"
-              //value={defaultValues?.titulo}
           />
           {errors.titulo && <p className="text-sm text-red-600 mt-1">{errors.titulo.message}</p>}
         </div>
@@ -91,7 +90,6 @@ export function MovieForm({mode, defaultValues}: MovieFormProps) {
             inputMode="numeric"
             {...register("faixaEtaria")}
             placeholder="Ex: 12, 14, 16"
-            //value={defaultValues?.faixaEtaria}
           />
           {errors.faixaEtaria && <p className="text-sm text-red-600 mt-1">{errors.faixaEtaria.message}</p>}
         </div>
@@ -102,7 +100,6 @@ export function MovieForm({mode, defaultValues}: MovieFormProps) {
             inputMode="text"
             {...register("genero")}
             placeholder="Ex: Ficção, Ação"
-            //value={defaultValues?.genero}
           />
           {errors.genero && <p className="text-sm text-red-600 mt-1">{errors.genero.message}</p>}
         </div>
