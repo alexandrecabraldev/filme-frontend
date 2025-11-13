@@ -73,7 +73,11 @@ export function MovieForm({mode, defaultValues}: MovieFormProps) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
           <label className="label">Título</label>
-          <input className="input" {...register("titulo")} placeholder="Digite o título" />
+          <input
+              className="input" {...register("titulo")}
+              placeholder="Digite o título"
+            value={defaultValues?.titulo}
+          />
           {errors.titulo && <p className="text-sm text-red-600 mt-1">{errors.titulo.message}</p>}
         </div>
         <div>

@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="88aca734-3d53-41c5-b48f-344bbd57ec40" name="Changes" comment="black names">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/listar/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/listar/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MovieForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieForm.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,18 +16,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Zaka633"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Zaka633&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/alexandrecabraldev/filme-frontend.git",
-    "accountId": "a0dd9abc-d5d8-435f-baae-c17c52f8a94a"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/alexandrecabraldev/filme-frontend.git&quot;,
+    &quot;accountId&quot;: &quot;a0dd9abc-d5d8-435f-baae-c17c52f8a94a&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 8
@@ -57,7 +56,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "C:\\Users\\ryans\\WebstormProjects\\filme-frontend\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "C:\\Users\\alexa\\Desktop\\trabalho_front\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
