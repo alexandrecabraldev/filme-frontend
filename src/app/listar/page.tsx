@@ -81,7 +81,7 @@ export default function ListarPage() {
         </div>
         {/* Formulário em modo edição apenas para capturar/validar dados, sem integração */}
         <MovieForm
-          key={filmeEditar?.id ?? "novo"}
+          key={filmeEditar?.id}
           mode="edit"
           defaultValues={{ id: filmeEditar?.id, titulo: filmeEditar?.titulo, faixaEtaria: filmeEditar?.faixaEtaria, genero: filmeEditar?.genero, atores: filmeEditar?.atores }}
         />

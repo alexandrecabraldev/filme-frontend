@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88aca734-3d53-41c5-b48f-344bbd57ec40" name="Changes" comment="black names">
-      <change beforePath="$PROJECT_DIR$/src/components/MovieForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieForm.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="88aca734-3d53-41c5-b48f-344bbd57ec40" name="Changes" comment="black names" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
