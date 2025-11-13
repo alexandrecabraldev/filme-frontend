@@ -24,24 +24,24 @@ export default function ListarPage() {
   return (
     <div className="space-y-6">
       <section className="card p-4">
-        <h2 className="text-lg font-semibold mb-4">Lista de filmes</h2>
+        <h2 className="text-lg text-gray-900 font-semibold mb-4">Lista de filmes</h2>
         <div className="overflow-x-auto">
           <table className="table">
             <thead>
               <tr>
-                <th className="th">Título</th>
-                <th className="th">Atores</th>
-                <th className="th">Faixa etária</th>
-                <th className="th">Gênero</th>
-                <th className="th">Operações</th>
+                <th className="th text-gray-900">Título</th>
+                <th className="th text-gray-900">Atores</th>
+                <th className="th text-gray-900">Faixa etária</th>
+                <th className="th text-gray-900">Gênero</th>
+                <th className="th text-gray-900">Operações</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-200">
+            <tbody className="divide-y divide-blue-200">
               <tr>
                 {filmes.length === 0 && "Nenhum filme cadastrado"}
               </tr>
                 {filmes.map((filme) => (
-                  <tr key={filme.id}>
+                  <tr key={filme.id} className=" text-gray-900" >
                     <td>{filme.titulo}</td>
                     <td>{filme.atores.map((ator)=>(ator.nome)).join('/')}</td>
                     <td>{filme.faixaEtaria}</td>
@@ -78,7 +78,7 @@ export default function ListarPage() {
 
       <section className="card p-4">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-semibold">Editar filme</h2>
+          <h2 className="text-lg font-semibold text-gray-900">Editar filme</h2>
         </div>
         {/* Formulário em modo edição apenas para capturar/validar dados, sem integração */}
         <MovieForm
